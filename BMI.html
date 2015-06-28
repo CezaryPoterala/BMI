@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Kalkulator BMI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="BMI.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="BMIjs.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Kalkulator BMI</h2>
+  <p style=" padding-bottom: 10px;"><strong>Wskaźnik masy ciała (ang. Body Mass Index (BMI)</strong>– współczynnik 
+  powstały przez podzielenie masy ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach. 
+  Klasyfikacja (zakres wartości) wskaźnika BMI została opracowana wyłącznie dla dorosłych i nie może być stosowana u dzieci.
+  Dla oceny prawidłowego rozwoju dziecka wykorzystuje się siatki centylowe, które powinny być dostosowane dla danej populacji.</br>
+  <a href="https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a">Dowiedz się wiecej na temat BMI!</a>
+  </p>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <label for="height">Wzrost:</label>
+		<input type="text" maxlength="3"  class="form-control" id="height" placeholder="Podaj swój wzrost w cm.">
+	</div>
+    <div class="form-group">
+      <label for="weight">Waga:</label>
+      <input type="text" maxlength="3" class="form-control" id="weight" placeholder="Podaj swoją wagę.">
+    </div>
+    <button type="button" class="btn btn-default">Oblicz BMI</button>
+  </form>
+  <p id="result">Wynik:</p>
+  <p  id="fineW"> </p>
+  <p class='BMI'>Zakresy wartości BMI: </p>
+  <ul>
+	<li>< 16 – wygłodzenie</li>
+	<li>16,0–16,99 – wychudzenie (spowodowane często przez ciężką chorobę lub anoreksję)</li>
+	<li>17,0–18,49 – niedowaga</li>
+	<li>18,5–24,99 – wartość prawidłowa</li>
+	<li>25,0–29,99 – nadwaga</li>
+	<li>30,0–34,99 – I stopień otyłości</li>
+	<li>35,0–39,99 – II stopień otyłości (otyłość kliniczna)</li>
+	<li>≥ 40,0 – III stopień otyłości (otyłość skrajna)</li>
+	</ul>
+</div>
+</body>
+</html>

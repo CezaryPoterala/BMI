@@ -1,0 +1,25 @@
+*{
+font-family: 'Lato', sans-serif;
+}
+.container{
+background-color: #cccccc;
+border-radius: 1em;
+}
+body{
+  padding-top: 25px;
+}
+.form-control{
+width:185px !important;
+}
+#result{
+ padding-top: 10px;
+}
+h2{
+font-weight: 900 !important;
+border-bottom-style: groove;
+border-bottom-color:#2f2f2f ;
+padding-bottom:5px;
+}
+.BMI{
+margin-bottom:5px !important;
+}
