@@ -26,10 +26,10 @@ $(document).ready(function() {
     });
 	
 	$('.btn').click(function(){
-		
 		function alert1(){
 			alert('Formularz nie został poprawnie wypełniony.');	
 		}
+		
 	var height = document.getElementById("height").value;
 	var weight = document.getElementById("weight").value;
 	
@@ -39,17 +39,24 @@ $(document).ready(function() {
 		alert1();
 	}else{
 		
-	var dd = ( weight ) / (( height /100) *( height /100));
-	var bMI = dd.toPrecision(4);
-	var properW1 = (( height /100) *( height /100)) * 18.5;
-	var properW2 = (( height /100) *( height /100)) * 24.99
+	var dd = ( weight ) / (( height /100 ) *( height /100 ));
+	var bMI = dd.toFixed(2);
+	var properW1 = (( height /100 ) *( height /100 )) * 18.5;
+	var properW2 = (( height /100 ) *( height /100 )) * 24.99;
+	
+	if( properW1.toFixed(0) / (( height /100 ) * ( height /100 )) < 18.5 ) {
+		properW1 +=1;
+	}else if( properW2.toFixed(0) / (( height /100 ) *( height /100) ) > 24.99 ){
+		properW2 -=1;
+	}
+	
 	
 	if(bMI < 18.5){
-		$('#result').html("Wynik: Masz <span style='color: #fe1200;'>niedowage</span> ! Twoje BMI wynosi: " + bMI + ".");
+		$('#result').html( "Wynik: Masz <span style='color: #fe1200;'>niedowage</span> ! Twoje BMI wynosi: " + bMI + "." );
 	}else if(bMI  < 25){
-		$('#result').html("Wynik: Twoje BMI jest w <span style='color: #28bf22;'>normie</span> i  wynosi: " + bMI + ".");
+		$('#result').html("Wynik: Twoje BMI jest w <span style='color: #28bf22;'>normie</span> i  wynosi: " + bMI + "." );
 	}else{
-		$('#result').html("Wynik: Masz <span style='color:#fe1200;'>nadwagę</span>! Twoje BMI wynosi: " + bMI + ".");
+		$('#result').html("Wynik: Masz <span style='color:#fe1200;'>nadwagę</span>! Twoje BMI wynosi: " + bMI + "." );
 	}
 	
 	$('#fineW').html('Dla podanego wzrostu (' + height + ' cm) prawidłowa waga wynosi pomiędzy: ' + properW1.toFixed(0) + ' a ' + properW2.toFixed(0)  + ' kg.');
