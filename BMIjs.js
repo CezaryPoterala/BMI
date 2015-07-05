@@ -44,12 +44,10 @@ $(document).ready(function() {
 	var properW1 = (( height /100 ) *( height /100 )) * 18.5;
 	var properW2 = (( height /100 ) *( height /100 )) * 24.99;
 	
-	if( properW1.toFixed(0) / (( height /100 ) * ( height /100 )) < 18.5 ) {
+	if( properW1.toFixed(0) / (( height /100 ) * ( height /100 )) < 18.5 ) 
 		properW1 +=1;
-	}else if( properW2.toFixed(0) / (( height /100 ) *( height /100) ) > 24.99 ){
+	if(  properW2.toFixed(0) / (( height /100 ) *( height /100) )> 24.99 )
 		properW2 -=1;
-	}
-	
 	
 	if(bMI < 18.5){
 		$('#result').html( "Wynik: Masz <span style='color: #fe1200;'>niedowage</span> ! Twoje BMI wynosi: " + bMI + "." );
